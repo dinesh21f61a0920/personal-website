@@ -1,0 +1,453 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Dinesh Reddy Kanala - Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hover-glow:hover {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+      transition: box-shadow 0.3s ease;
+    }
+    .scroll-bg {
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      transition: transform 0.3s ease;
+    }
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .particle {
+      position: absolute;
+      background-color: rgba(59, 130, 246, 0.3);
+      border-radius: 50%;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+      }
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 text-gray-800 font-sans scroll-bg relative min-h-screen">
+  <img alt="Abstract tech background with blue and purple gradients, digital style" class="fixed inset-0 w-full h-full object-cover -z-10" height="1080" src="https://storage.googleapis.com/a1aa/image/68d12567-ce93-43fc-bd93-f7075554f5ab.jpg" width="1920"/>
+  <nav aria-label="Primary Navigation" class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50" role="navigation">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+     <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">
+       Dinesh Reddy Kanala
+      </h1>
+     </div>
+     <div class="hidden md:flex space-x-8">
+      <a class="text-gray-700 hover:text-indigo-600 transition-colors duration-300" href="#about">
+       About
+      </a>
+      <a class="text-gray-700 hover:text-indigo-600 transition-colors duration-300" href="#skills">
+       Skills
+      </a>
+      <a class="text-gray-700 hover:text-indigo-600 transition-colors duration-300" href="#projects">
+       Projects
+      </a>
+      <a class="text-gray-700 hover:text-indigo-600 transition-colors duration-300" href="#contact">
+       Contact
+      </a>
+     </div>
+     <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle mobile menu" class="md:hidden focus:outline-none" id="mobile-menu-btn">
+      <svg aria-hidden="true" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </button>
+    </div>
+    <div aria-label="Mobile Navigation" class="hidden flex-col space-y-2 pb-4 md:hidden" id="mobile-menu" role="menu">
+     <a class="text-gray-700 hover:text-indigo-600 block px-2 py-1 rounded" href="#about" role="menuitem">
+      About
+     </a>
+     <a class="text-gray-700 hover:text-indigo-600 block px-2 py-1 rounded" href="#skills" role="menuitem">
+      Skills
+     </a>
+     <a class="text-gray-700 hover:text-indigo-600 block px-2 py-1 rounded" href="#projects" role="menuitem">
+      Projects
+     </a>
+     <a class="text-gray-700 hover:text-indigo-600 block px-2 py-1 rounded" href="#contact" role="menuitem">
+      Contact
+     </a>
+    </div>
+   </div>
+  </nav>
+  <section class="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-in" id="hero">
+   <div class="text-center md:text-left">
+    <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+     Hello, I'm
+     <span class="text-indigo-600">
+      Dinesh Reddy
+     </span>
+    </h2>
+    <p class="text-xl text-gray-600 mb-8">
+     A Java Backend Developer with hands-on experience in Spring Boot,
+        JPA/Hibernate, and building scalable RESTful APIs.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+     <a class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 hover-glow text-center" href="#projects">
+      View My Work
+     </a>
+    </div>
+   </div>
+   <div class="flex justify-center md:justify-end">
+    <img alt="Professional headshot of Dinesh Reddy Kanala, a young male software engineer with short black hair, wearing a blue shirt, smiling confidently" class="rounded-full shadow-2xl w-80 h-80 object-cover hover-glow" height="320" src="profile-photo.jpg" width="320"/>
+   </div>
+   <div class="particles" id="particles">
+   </div>
+  </section>
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white max-w-7xl mx-auto" id="about">
+   <div class="text-center mb-12">
+    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+     About Me
+    </h3>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+     I am a dedicated and passionate developer skilled in building robust
+        and scalable backend systems with Java, Spring Boot, and Oracle/H2
+        databases. I thrive in collaborative environments, practicing Agile
+        methodologies and utilizing tools like Git and Postman to deliver
+        high-quality software.
+    </p>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+     <h4 class="text-2xl font-semibold text-gray-900 mb-4">
+      My Journey
+     </h4>
+     <p class="text-gray-600 mb-4">
+      My journey into technology is driven by a strong foundation in
+          computer science and a passion for problem-solving. I am continuously
+          learning and applying my skills to real-world challenges.
+     </p>
+     <ul class="space-y-2 text-gray-600 list-disc list-inside">
+      <li>
+       Pursuing B.Tech in Computer Science (AI &amp; ML) from Siddharth
+            Institute of Engineering &amp; Technology.
+      </li>
+      <li>
+       Currently gaining industry experience as a Java Full Stack Developer
+            Intern at Sri Tech Software Services.
+      </li>
+      <li>
+       Proficient in core Java concepts like OOPS, Multithreading, and Collections.
+      </li>
+      <li>
+       Focused on backend development and modern API design principles.
+      </li>
+     </ul>
+    </div>
+    <div class="text-center">
+     <img alt="Abstract digital artwork representing code structure with interconnected nodes and lines in blue and purple hues" class="rounded-lg shadow-lg max-w-full mx-auto" height="400" src="https://storage.googleapis.com/a1aa/image/7a1fd862-32bc-4697-797f-7063bc172f30.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 max-w-7xl mx-auto" id="skills">
+   <div class="text-center mb-12">
+    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+     Skills &amp; Technologies
+    </h3>
+    <p class="text-lg text-gray-600">
+     I work with a diverse range of technologies to bring ideas to life.
+        Here's what I'm proficient in:
+    </p>
+   </div>
+   <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Java
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Spring Boot
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Hibernate
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      REST APIs
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      SQL
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Oracle
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      MySQL
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Git/GitHub
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Maven
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Postman
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      OOP
+     </h4>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md text-center hover-glow">
+     <h4 class="font-semibold text-gray-900">
+      Multithreading
+     </h4>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white max-w-7xl mx-auto" id="projects">
+   <div class="text-center mb-12">
+    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+     Featured Projects
+    </h3>
+    <p class="text-lg text-gray-600">
+     Here are some of my recent works that showcase my skills and passion
+        for development.
+    </p>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg project-card">
+     <img alt="Abstract representation of an API backend for an appointment scheduling system with code snippets and calendar icons" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/581658a5-e070-4aab-19b9-53e5e8d5b6b3.jpg" width="600"/>
+     <div class="p-6">
+      <h4 class="text-xl font-semibold text-gray-900 mb-2">
+       Bookify Service - Scheduling API
+      </h4>
+      <p class="text-gray-600 mb-4">
+       A backend REST API for an appointment scheduling system. Features
+            robust ORM with JPA/Hibernate and transactional logic for data
+            integrity.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+       <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+        Java 21
+       </span>
+       <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+        Spring Boot
+       </span>
+       <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
+        Oracle
+       </span>
+      </div>
+      <a class="text-indigo-600 hover:text-indigo-800 font-semibold" href="https://github.com/dinesh21f61a0920/bookify-service" target="_blank" rel="noopener noreferrer">
+       View Project →
+      </a>
+     </div>
+    </div>
+    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg project-card">
+     <img alt="Visual of a console-based banking management system showing terminal window with account details" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/f14c661b-7fea-413c-24c3-8502eb958e06.jpg" width="600"/>
+     <div class="p-6">
+      <h4 class="text-xl font-semibold text-gray-900 mb-2">
+       Control-Based Bank Management
+      </h4>
+      <p class="text-gray-600 mb-4">
+       A console-based banking application built using Java OOP principles,
+            featuring account creation, transactions, and history.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+       <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+        Java
+       </span>
+       <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+        OOP
+       </span>
+      </div>
+      <a class="text-indigo-600 hover:text-indigo-800 font-semibold" href="https://github.com/dinesh21f61a0920/Bank-Managment-System" target="_blank" rel="noopener noreferrer">
+       View Project →
+      </a>
+     </div>
+    </div>
+    <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg project-card">
+     <img alt="A chart representing a machine learning model for heart disease prediction with graphs and data points" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/cff58682-ec0c-4822-4dd8-bafd335728c4.jpg" width="600"/>
+     <div class="p-6">
+      <h4 class="text-xl font-semibold text-gray-900 mb-2">
+       Early Detection of Heart Disease (ML)
+      </h4>
+      <p class="text-gray-600 mb-4">
+       A college project implementing Logistic Regression and Decision Tree
+            models to predict heart disease from patient data.
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4">
+       <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+        Machine Learning
+       </span>
+       <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
+        Python
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white max-w-7xl mx-auto" id="contact">
+   <div class="text-center mb-12">
+    <h3 class="text-3xl font-bold mb-4">
+     Get In Touch
+    </h3>
+    <p class="text-lg opacity-90">
+     I'm always open to discussing new opportunities and interesting
+        projects. Let's create something amazing together!
+    </p>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+     <h4 class="text-xl font-semibold mb-6">
+      Contact Information
+     </h4>
+     <div class="space-y-4 text-white">
+      <p>
+       <strong>
+        Email:
+       </strong>
+       <a class="hover:underline" href="mailto:kanaladineshreddy123@gmail.com">
+        kanaladineshreddy123@gmail.com
+       </a>
+      </p>
+      <p>
+       <strong>
+        Phone:
+       </strong>
+       +91 8341639006
+      </p>
+      <p>
+       <strong>
+        Location:
+       </strong>
+       Anantapur, Andhra Pradesh, India
+      </p>
+     </div>
+    </div>
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" class="space-y-4" method="POST">
+     <div>
+      <input class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white placeholder-opacity-70" name="name" placeholder="Your Name" required="" type="text"/>
+     </div>
+     <div>
+      <input class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white placeholder-opacity-70" name="email" placeholder="Your Email" required="" type="email"/>
+     </div>
+     <div>
+      <textarea class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-white text-white placeholder-white placeholder-opacity-70 resize-none" name="message" placeholder="Your Message" required="" rows="4"></textarea>
+     </div>
+     <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300" type="submit">
+      Send Message
+     </button>
+    </form>
+   </div>
+  </section>
+  <footer class="bg-gray-900 text-white py-8 px-4 sm:px-6 lg:px-8">
+   <div class="max-w-7xl mx-auto text-center">
+    <p>
+     © 2025 Dinesh Reddy Kanala. All rights reserved.
+    </p>
+    <div class="flex justify-center space-x-6 mt-4">
+     <a aria-label="LinkedIn" class="text-gray-400 hover:text-white" href="https://www.linkedin.com/in/kanala-dinesh-reddy-b1825b256" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-linkedin fa-lg"></i>
+     </a>
+     <a aria-label="GitHub" class="text-gray-400 hover:text-white" href="https://github.com/dinesh21f61a0920" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-github fa-lg"></i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuBtn.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      const expanded =
+        mobileMenuBtn.getAttribute("aria-expanded") === "true" ? "false" : "true";
+      mobileMenuBtn.setAttribute("aria-expanded", expanded);
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetElement = document.querySelector(this.getAttribute("href"));
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+        // Close mobile menu on link click
+        if (!mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.add("hidden");
+          mobileMenuBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
+    // Create floating particles
+    function createParticles() {
+      const particlesContainer = document.getElementById("particles");
+      if (!particlesContainer) return;
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+        particle.style.left = Math.random() * 100 + "%";
+        const size = Math.random() * 5 + 2;
+        particle.style.width = size + "px";
+        particle.style.height = size + "px";
+        particle.style.animationDuration = Math.random() * 5 + 5 + "s";
+        particle.style.animationDelay = Math.random() * -10 + "s";
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    window.addEventListener("load", createParticles);
+  </script>
+ </body>
+</html>
